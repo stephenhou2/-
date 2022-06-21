@@ -1,0 +1,48 @@
+<!DOCTYPE HMTL>
+<html lang="en">
+  <head>
+	<meta charset="utf-8"/>
+	<title>Gradle项目中新建Servlet程序并连接tomcat</title>
+  </head>
+  <body>
+	<h1>Gradle项目中新建Servlet程序并连接tomcat</h1>
+	<h2><a href="https://www.w3cschool.cn/gradle/6qo51htq.html">点我了解Gradle</a></h2>
+	<div>
+	  <ol>
+	  	<li>
+			<h2>新建一个gradle项目，选择java和web</h2>
+			<img src="Snipaste_2022-05-23_09-59-15.png"/>
+		</li>
+		<li>
+			<h2>填写项目信息</h2>
+			<img src="Snipaste_2022-05-23_10-01-04.png"/>
+		</li>		
+		<li>
+			<h2>打开build.gradle文件，在依赖项中添加 
+				providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0'</h2>
+			<img src="Snipaste_2022-05-23_10-03-50.png"/>
+		</li>		
+		<li>
+			<h2>点击 reload gradle changes</h2>
+			<img src="Snipaste_2022-05-23_10-05-22.png"/>
+		</li>		
+		<li>
+			<h2>此时我们就可以创建servlet了</h2>
+			<img src="Snipaste_2022-05-23_10-27-22.png"/>
+			<img src="Snipaste_2022-05-23_10-28-34.png"/>
+		</li>		
+		<li>
+			<h2>部署tomcat</h2>
+			<img src="Snipaste_2022-05-23_10-27-22.png"/>
+			<img src="Snipaste_2022-05-23_10-28-34.png"/>
+			<img src="Snipaste_2022-05-23_10-30-23.png"/>
+			<img src="Snipaste_2022-05-23_10-30-57.png"/>
+		</li>		
+		<li>
+			<h2>运行项目后访问servlet对应的地址,就能看到之前返回的数据了</h2>
+			<img src="Snipaste_2022-05-23_10-32-32.png"/>
+		</li>
+	  </ol>
+	</div>
+  </body>
+</html>

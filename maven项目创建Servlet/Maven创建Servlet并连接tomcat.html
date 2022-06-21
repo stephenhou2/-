@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+	<meta charset="utf-8"/>
+	<title>Maven构建Servlet并连接Tomcat</title>
+  </head>
+  <body>
+	<h1>Maven构建Servlet并连接Tomcat</h1>
+	<h2><a href="https://www.w3cschool.cn/maven/" title="Maven介绍"/> 点我了解Maven </a></h2>
+	<ol>
+		<li>
+			<h2>新建一个Maven工程</h2>
+			<img src="20201219102740728.png"/>
+		</li>
+		<li>
+			<h2>不勾选模板，点击next</h2>
+			<img src="20201219103148155.png"/>
+		</li>	
+		<li>
+			<h2>设置项目名称，组织名称</h2>
+			<img src="20201219103457671.png"/>
+		</li>			
+		<li>
+			<h2>Maven 空项目文件结构如下，删除src (作为父项目管理依赖，具体功能由子模块实现)</h2>
+			<img src="20201219104658660.png"/>
+		</li>
+		<li>
+			<h2>在Maven项目中添加webapp模块 选择项目的根目录->new ->Module</h2>
+			<img src="20201219105101777.png"/>
+		</li>	
+		<li>
+			<h2>创建webapp子模块</h2>
+			<img src="20201219105406610.png"/>
+		</li>		
+		<li>
+			<h2>设置子模块的文件名和文件路径</h2>
+			<img src="20201219105625607.png"/>
+		</li>			
+		<li>
+			<h2>在子模块中添加java文件和resource文件，java文件鼠标右键，将java设置为Source文件（这样才可以添加java代码）</h2>
+			<img src="20201219111526666.png"/>
+		</li>				
+		<li>
+			<h2>File->project structure->artifacts  新增一个部署</h2>
+			<img src="Snipaste_2022-05-19_17-49-47.png"/>
+			<img src="Snipaste_2022-05-19_17-51-26.png"/>
+		</li>					
+		<li>
+			<h2>添加servlet-api依赖</h2>
+			<div>        
+			&lt;dependency&gt;</br>
+				&nbsp;&nbsp;&lt;groupId&gtjavax.servlet&lt;/groupId&gt;</br>
+				&nbsp;&nbsp;&lt;artifactId&gtjavax.servlet-api&lt;/artifactId&gt;</br>
+				&nbsp;&nbsp;&lt;version&gt3.1.0&lt;/version&gt;</br>
+				&nbsp;&nbsp;&lt;scope&gtcompile&lt;/scope&gt;</br>
+			&lt;/dependency&gt;</br>
+			</div>
+			<img src="Snipaste_2022-05-23_10-39-22.png"/>
+		</li>					
+		<li>
+			<h2>刷新依赖</h2>
+			<img src="Snipaste_2022-05-23_10-39-45.png"/>
+		</li>	
+		<li>
+			<h2>新建Servlet</h2>
+			<img src="Snipaste_2022-05-23_10-56-09.png"/>
+		</li>
+		<li>
+			<h2>下面开始部署tomcat,首先Run->Edit Configuration</h2>
+			<img src="Snipaste_2022-05-19_11-10-20.png"/>
+			<h2>server配置<h2>
+			<img src="Snipaste_2022-05-19_11-13-50.png"/>
+			<h2>Deployment配置<h2>
+			<img src="Snipaste_2022-05-19_11-20-58.png"/>
+		</li>
+		<li>
+			<h2>到此tomcat配置完成，选择tomcat运行，就可以通过tomcat提供Servlet服务了</h2>
+		</li>		
+	</ol>
+  </body>
+</html>

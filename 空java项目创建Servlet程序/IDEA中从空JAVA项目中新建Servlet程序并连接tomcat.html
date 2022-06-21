@@ -1,0 +1,62 @@
+<!DOCTYPE HMTL>
+<html lang="en">
+  <head>
+	<meta charset="utf-8"/>
+	<title>IDEA中从空JAVA项目中新建Servlet程序并连接tomcat</title>
+  </head>
+  <body>
+	<h1>IDEA中从空JAVA项目中新建Servlet程序并连接tomcat</h1>
+	<div>
+	  <ol>
+	  	<li><h2>新建一个空的java项目</h2></li>
+		<li>
+			<h2>右键项目，选择添加框架支持</h2>
+			<img src="add_framework_support.png"/>
+		</li>
+		<li>
+			<h2>选择WebApplication</h2>
+			<img src="20210811223513960.png"/>
+		</li>
+		<li>
+			<h2>然后就会多出一个Web文件夹</h2>
+			<img src="2021081122364954.png"/>
+		</li>
+		<li>
+			<h2>在WEB-INF文件夹下新建lib和classes两个文件夹</h2>
+		</li>
+		<li>
+			<h2>把servlet-api.jar放入lib文件夹下</h2>
+			<img src="2021081122442672.png"/>
+		</li>
+		<li>
+			<h2>File->project structure->modules->paths  更改编译目录为上面创建的classes路径</h2>
+			<img src="20210811224733778.png"/>
+		</li>
+		<li>
+			<h2>File->project structure->modules->dependencies  新增servlet-api.jar包依赖</h2>
+			<img src="20210811225028937.png"/>
+		</li>
+		<li>
+			<h2>File->project structure->artifacts  新增一个部署</h2>
+			<img src="Snipaste_2022-05-19_17-49-47.png"/>
+			<img src="Snipaste_2022-05-19_17-51-26.png"/>
+		</li>
+		<li>
+			<h2>新建Servlet</h2>
+			<img src="20210811225550523.png"/>
+		</li>
+		<li>
+			<h2>下面开始部署tomcat,首先Run->Edit Configuration</h2>
+			<img src="Snipaste_2022-05-19_11-10-20.png"/>
+			<h2>server配置<h2>
+			<img src="Snipaste_2022-05-19_11-13-50.png"/>
+			<h2>Deployment配置<h2>
+			<img src="Snipaste_2022-05-19_11-20-58.png"/>
+		</li>
+		<li>
+			<h2>到此tomcat配置完成，选择tomcat运行，就可以通过tomcat提供Servlet服务了</h2>
+		</li>
+	  </ol>
+	</div>
+  </body>
+</html>

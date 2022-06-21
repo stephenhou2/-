@@ -1,0 +1,36 @@
+<!DOCTYPE=HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Servlet调试与日志</title>
+	</head>
+	
+	<body>
+		<h1>Servlet调试与日志</h1>
+		<ul>
+			<li><h2>默认情况下，IDE只是将Servlet程序部署到tomcat中去执行，所以日志不会打印在IDE的console中，而是输出到了tomcat目录下的logs文件夹中</h2></li>
+			<li>
+				<h2>如果通过IDEA运行，默认情况下则日志文件会输出到如下路径，而控制台中并不会显示日志</h2>
+				<img src="Snipaste_2022-05-23_17-47-46.png"/>
+			</li>
+			<li>
+				<h2>通过更改配置，我们将用户日志输出到控制台，也可以更改用户日志的输出位置</h2>
+				<img src="Snipaste_2022-05-24_08-26-20.png"/>
+			</li>
+			<li>
+				<h2>更改设置之后，控制台输出了 <u>tomcat日志</u> 和 <u>System.out日志</u></h2>
+				<img src="Snipaste_2022-05-24_09-33-31.png"/>
+			</li>
+			<li>
+				<h2>可以看到，在指定的输出位置，输出了 <u>tomcat日志</u> 和 <u>System.out日志</u>(和IDE中的控制台日志一样)，但是ServletContext.log并没有写入这个日志中</h2>
+				<img src="Snipaste_2022-05-24_09-18-56.png"/>
+				<img src="Snipaste_2022-05-24_09-15-38.png"/>
+			</li>
+			<li>
+				<h2>ServletContext.log其实写入了编辑器日志目录下</i></h2>
+				<img src="Snipaste_2022-05-24_09-20-21.png"/>
+				<img src="Snipaste_2022-05-24_09-20-59.png"/>
+			</li>
+		</ul>
+	</body>
+</html>
